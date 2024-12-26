@@ -1,0 +1,284 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F3F4F6; /* Soft Cream */
+    color: #333;
+    scroll-behavior: smooth;
+  }
+
+  header {
+    background: linear-gradient(45deg, #1E3A8A, #3DD4A2); /* Gradient background */
+    padding: 20px 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+  }
+
+  nav ul li {
+    margin: 0 30px;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+
+  nav ul li a:hover {
+    color: #FF6F61; /* Warm Coral */
+    transform: scale(1.1);
+  }
+
+  .hero {
+    background-image: url('https://images.pexels.com/photos/29890076/pexels-photo-29890076/free-photo-of-artisan-baking-preparing-pastry-in-black-and-white.jpeg');
+    background-size: cover;
+    background-position: center;
+    color: #F3F4F6; /* Light Cream text for contrast with grayscale */
+    text-align: center;
+    padding: 150px 20px;
+    position: relative;
+    overflow: hidden;
+    animation: parallax 10s infinite linear;
+  }
+
+  .hero:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Darker overlay for better text visibility */
+  }
+
+  .hero h1 {
+    font-size: 4.5rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 700;
+    animation: fadeInScale 1.5s ease-out;
+    text-shadow: 2px 2px 5px rgba(9, 9, 9, 0.9); 
+  }
+
+  .hero p {
+    font-size: 1.6rem;
+    margin-bottom: 40px;
+    font-weight: 300;
+    animation: fadeInScale 2s ease-out;
+  }
+
+  .cta-btn {
+    background-color: #FF6F61; /* Warm Coral */
+    color: white;
+    padding: 18px 36px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    position: relative;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+  }
+
+  .cta-btn:hover {
+    background-color: #3DD4A2; /* Light Aqua */
+    transform: scale(1.1);
+  }
+
+  .owner-img {
+    position: absolute;
+    top: 60%;
+    left: 80px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    border: 2px solid rgb(40, 38, 38);
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    animation: fadeInUp 2s ease-out;
+  }
+
+  section {
+    padding: 80px 20px;
+    text-align: center;
+    animation: fadeInUp 1.5s ease-out;
+  }
+
+  #about, #contact {
+    background-color: #fff;
+    margin-bottom: 60px;
+    padding: 80px 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  #menu {
+    background-color: #F3F4F6; /* Light Cream */
+    padding-bottom: 60px;
+  }
+
+  .menu-items {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+  }
+
+  .menu-item {
+    text-align: center;
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 250px;
+    margin-bottom: 40px;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .menu-item img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+  }
+
+  .menu-item p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1E3A8A; /* Deep Blue */
+  }
+
+  #gallery {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+  }
+
+  #gallery img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+
+  #gallery img:hover {
+    transform: scale(1.05);
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  input, textarea {
+    padding: 15px;
+    font-size: 1rem;
+    border: 2px solid #3DD4A2; /* Light Aqua */
+    border-radius: 10px;
+    transition: border 0.3s ease;
+  }
+
+  input:focus, textarea:focus {
+    border-color: #FF6F61; /* Warm Coral */
+  }
+
+  button {
+    padding: 15px;
+    background-color: #FF6F61; /* Warm Coral */
+    color: white;
+    border: none;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  button:hover {
+    background-color: #3DD4A2; /* Light Aqua */
+    transform: scale(1.05);
+  }
+
+  footer {
+    background: linear-gradient(45deg, #1E3A8A, #3DD4A2); /* Gradient footer */
+    color: white;
+    padding: 40px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 15px 15px 0 0;
+  }
+
+  footer p {
+    font-size: 1.2rem;
+  }
+
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+
+    .hero p {
+      font-size: 1.4rem;
+    }
+
+    .menu-items {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    form {
+      width: 90%;
+    }
+  }
+
+  @keyframes fadeInUp {
+    0% { transform: translateY(50px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+
+  @keyframes fadeInScale {
+    0% { opacity: 0; transform: scale(0.8); }
+    100% { opacity: 1; transform: scale(1); }
+  }
+
+  @keyframes parallax {
+    0% { background-position: center top; }
+    100% { background-position: center bottom; }
+  }
